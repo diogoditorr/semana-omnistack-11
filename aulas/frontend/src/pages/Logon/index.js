@@ -24,7 +24,12 @@ export default function Logon() {
 
             history.push('/profile');
         } catch(err) {
-            alert('Falha no login, tente novamente.')
+            alert(`
+                Falha no login, tente novamente.
+
+                - ${err.message}:
+                ${err.response.data.error}
+            `)
         }
     }
 

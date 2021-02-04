@@ -35,7 +35,13 @@ export default function Register() {
 
             history.push('/')
         } catch (err) {
-            alert('Erro no cadastro, tente novamente.')
+            console.log(err)
+            alert(`
+                Erro no cadastro, tente novamente.
+            
+                - ${err.message}:
+                ${err.response.data.validation.body.message}
+            `)
         };
     }
 
