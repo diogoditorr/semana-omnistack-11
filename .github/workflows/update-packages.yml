@@ -1,0 +1,18 @@
+name: update-packages
+on: 
+  schedule:
+    - cron: ''
+jobs:
+  update-backend:
+    runs-on: ubuntu-latest
+    steps:
+      
+      
+      - run: |
+          npm update
+          npm update --save-dev
+
+
+  update-frontend:
+  update-mobile:
+    
