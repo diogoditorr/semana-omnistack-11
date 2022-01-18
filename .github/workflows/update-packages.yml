@@ -1,18 +1,40 @@
-name: update-packages
-on: 
-  schedule:
-    - cron: ''
-jobs:
-  update-backend:
-    runs-on: ubuntu-latest
-    steps:
+# change directory to "./aulas/backend" from repository, Update package-lock.json with npm and commit changes to the main branch
+# name: update-packages
+# on: 
+#   schedule:
+#     - cron: '0 11 * * 5' # every Friday at 11:00 UTC
+# jobs:
+#   update-backend:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/setup-node@v2
+#         with:
+#           node-version: '16'
+
+#       - name: Install yarn
+#         run: npm install -g yarn
       
-      
-      - run: |
-          npm update
-          npm update --save-dev
+#       - run: cd "./aulas/backend"
+
+#       - name: Update packages
+#         uses: actions/npm-update@v1
+#         with:
+#           package-manager: npm
+#           update-packages: true
+#       - name: Commit changes
+#         run: |
+#           git add package-lock.json
+#           git commit -m "Update packages"
+#       - name: Push changes
+#         run: |
+#           git push origin main
 
 
-  update-frontend:
-  update-mobile:
+      # - run: |
+      #     npm update
+      #     npm update --save-dev
+
+  # update-frontend:
+  # update-mobile:
     
